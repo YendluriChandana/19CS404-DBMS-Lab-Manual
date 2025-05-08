@@ -102,160 +102,234 @@ CREATE TABLE Table_Name (
   col_name3 data_type DEFAULT 'default_value'
 );
 ```
+## Question 1
 
-**Question 1**
---
--- Paste Question 1 here
+Write a SQL query to Add a new column State as text in the Student_details table.
 
-```sql
--- Paste your SQL code below for Question 1
+![image](https://github.com/user-attachments/assets/5d7a6e5b-6ba2-4240-ba1d-31b29547c97d)
+
+```
+ALTER TABLE Student_details ADD COLUMN State TEXT;
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/6cb003d0-87bb-40da-acf7-862494137d13)
+
+
+## Question 2
+
+Insert the below data into the Employee table, allowing the Department and Salary columns to take their default values. 
+![image](https://github.com/user-attachments/assets/92d97d2d-2ac7-41a1-a214-ec27805eea0b)
+
+```
+INSERT INTO Employee(EmployeeID,Name,Position)
+
+VALUES('4','Emily White','Analyst');
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/a649c323-ee4c-4822-a92a-ded1248aaea7)
+
+
+## Question 3
+
+Insert all employees from Former_employees into Employee
+
+![image](https://github.com/user-attachments/assets/9a26979b-f501-4972-a478-3a6a9ac7480d)
+
+```
+INSERT into Employee(EmployeeID,Name,Department,Salary)
+
+SELECT EmployeeID,Name,Department,Salary FROM Former_employees;
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/39b5e8e3-c901-4c79-8a75-d1e5b2fe4d66)
+
+
+## Question 4
+
+Create a table named Customers with the following columns:
+
+![image](https://github.com/user-attachments/assets/e31d57bc-0014-41be-a17d-9bf087eb4244)
+
+```
+CREATE TABLE Customers(
+
+CustomerID INTEGER,
+
+Name TEXT,
+
+Email TEXT,
+
+JoinDate DATETIME );
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/f409977b-05f5-48f8-8580-61d4b5b82d87)
+
+
+## Question 5
+
+Write an SQL query to add a new column email of type TEXT to the Student_details table, and ensure that this column cannot contain NULL values and make default value as 'Invalid'
+
+![image](https://github.com/user-attachments/assets/c19b5fdf-4c75-40a8-baa4-2061818b5f86)
+
+```
+ALTER TABLE Student_details
+
+ADD COLUMN email TEXT not NULL default'Invalid';
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/b72df767-0517-43bf-9466-4bce8d4810af)
+
+
+## Question 6
+
+Create a table named Invoices with the following constraints:
+
+InvoiceID as INTEGER should be the primary key.
+
+InvoiceDate as DATE.
+
+Amount as REAL should be greater than 0.
+
+DueDate as DATE should be greater than the InvoiceDate.
+
+OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
+
+![image](https://github.com/user-attachments/assets/6a0f1456-613e-482c-8cab-8910e4a73b40)
+
 ```
 
-![image](https://github.com/user-attachments/assets/647dbedb-636d-42c5-b902-1bcecd994360)
+CREATE TABLE Invoices(
+
+InvoiceID INTEGER primary key,
+
+InvoiceDate DATE,
+
+Amount REAL CHECK(Amount>=0),
+
+DueDate DATE CHECK(DueDate>=InvoiceDate),
+
+OrderID INTEGER,
+
+foreign key (OrderID) references Orders(OrderID) );
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/dba9a422-8b10-45f2-9c68-43709ab5a7dc)
 
 
-**Output:**
+## Question 7
 
-![image](https://github.com/user-attachments/assets/32d2f9a7-cd0c-42e3-b5c7-a4703a7e85b6)
+Create a table named Products with the following constraints:
+
+ProductID should be the primary key.
+
+ProductName should be NOT NULL.
+
+Price is of real datatype and should be greater than 0.
+
+Stock is of integer datatype and should be greater than or equal to 0.
+
+![image](https://github.com/user-attachments/assets/9b287a80-c907-45e8-ac08-7a8f535b9939)
+
+```
+CREATE TABLE Products(
+
+ProductID INTEGER primary key,
+
+ProductName not NULL,
+
+Price REAL CHECK (Price>0),
+
+Stock INTEGER CHECK (Stock>=0) );
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/a36440d7-80dc-49b4-819d-b0e426d31300)
 
 
-**Question 3**
----
--- Paste Question 3 here
+## Question 8
 
-```sql
--- Paste your SQL code below for Question 3
+Create a table named Orders with the following constraints:
+
+OrderID as INTEGER should be the primary key.
+
+OrderDate as DATE should be not NULL.
+
+CustomerID as INTEGER should be a foreign key referencing Customers(CustomerID).
+
+![image](https://github.com/user-attachments/assets/5e497072-364f-45fa-b7b6-cc4b13a4821b)
+
 ```
 
-![image](https://github.com/user-attachments/assets/a75729c2-8d27-433e-9d0d-2331cc860fd6)
+CREATE TABLE Orders(
+
+OrderID INTEGER primary key,
+
+OrderDate DATE not NULL,
+
+CustomerID INTEGER,
+
+foreign key (CustomerID) references Customers(CustomerID) );
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/88efbb72-0399-4e32-956e-23e0571d2461)
 
 
-**Output:**
+## Question 9
 
+Create a table named Department with the following constraints:
 
-![image](https://github.com/user-attachments/assets/c76a53ff-1bc6-42e4-ac77-52afbe8b98e8)
+DepartmentID as INTEGER should be the primary key.
 
+DepartmentName as TEXT should be unique and not NULL.
 
-**Question 4**
----
--- Paste Question 4 here
+Location as TEXT.
 
-```sql
--- Paste your SQL code below for Question 4
+![image](https://github.com/user-attachments/assets/5708326b-6921-488d-bebe-1e9803f012f4)
+
 ```
 
-![image](https://github.com/user-attachments/assets/a25f6f41-5acc-4fdd-9848-ee238b2b4181)
+CREATE TABLE Department(
 
+DepartmentID INTEGER primary key,
 
-**Output:**
+DepartmentName TEXT UNIQUE not NULL,
 
-
-![image](https://github.com/user-attachments/assets/504d67ca-8b48-4ba2-b122-2a92eef6a250)
-
-
-**Question 5**
----
--- Paste Question 5 here
-
-```sql
--- Paste your SQL code below for Question 5
+Location TEXT );
 ```
+## Output:
+
+![image](https://github.com/user-attachments/assets/cfd3f219-8056-4f1e-ab86-6df451ca81f2)
 
 
-![image](https://github.com/user-attachments/assets/066556bd-b395-49cb-86bb-1f361a9f5c2f)
+## Question 10
 
+In the Books table, insert a record where some fields are NULL, another record where all fields are filled without any NULL values, and a third record where some fields are filled, and others are left as NULL.
 
-**Output:**
+![image](https://github.com/user-attachments/assets/8d173306-7768-4b0d-a52f-fd0262039a3c)
 
-
-![image](https://github.com/user-attachments/assets/b1590955-fedb-44a5-857a-0073fb85792a)
-
-
-**Question 6**
----
--- Paste Question 6 here
-
-```sql
--- Paste your SQL code below for Question 6
 ```
+INSERT INTO Books(ISBN, Title, Author, Publisher, Year)
 
-![image](https://github.com/user-attachments/assets/8646cd02-bf5d-4215-98d5-e88773dc6bd7)
+VALUES('978-1234567890', 'Introduction to AI', 'John Doe', null, null);
 
+INSERT INTO Books(ISBN, Title, Author, Publisher, Year)
 
-**Output:**
+VALUES('978-9876543210', 'Deep Learning', 'Jane Doe', 'TechPress', '2022');
 
-![image](https://github.com/user-attachments/assets/06922205-9e08-4b9b-a3d8-af9aa4a1db6a)
+INSERT INTO Books(ISBN, Title, Author, Publisher, Year)
 
-
-**Question 7**
----
--- Paste Question 7 here
-
-```sql
--- Paste your SQL code below for Question 7
+VALUES('978-1122334455', 'Cybersecurity Essentials', 'Alice Smith', null, 2021);
 ```
+## Output:
 
-![image](https://github.com/user-attachments/assets/7f7e7207-b62c-431c-b40c-4e750b53b633)
-
-
-**Output:**
-
-
-![image](https://github.com/user-attachments/assets/8c67c27e-2087-480b-bd88-df015154f3ed)
-
-
-
-**Question 8**
----
--- Paste Question 8 here
-
-```sql
--- Paste your SQL code below for Question 8
-```
-
-![image](https://github.com/user-attachments/assets/a866f06a-a4a1-4dec-ae24-8bcd2e3c2394)
-
-
-**Output:**
-
-
-![image](https://github.com/user-attachments/assets/3eda3cff-27d4-44be-9dcd-bbecc1893416)
-
-
-
-**Question 9**
----
--- Paste Question 9 here
-
-```sql
--- Paste your SQL code below for Question 9
-```
-
-![image](https://github.com/user-attachments/assets/a5fe3ae9-3a04-44eb-b583-df8a460a6bc0)
-
-
-**Output:**
-
-
-![image](https://github.com/user-attachments/assets/1f80f8bc-bc96-4973-add7-3f0b6dfc9628)
-
-
-
-**Question 10**
----
--- Paste Question 10 here
-
-```sql
--- Paste your SQL code below for Question 10
-```
-
-![image](https://github.com/user-attachments/assets/f2ff8ffb-46ef-45d9-8fa4-eed01aa81884)
-
-
-**Output:**
-
-![image](https://github.com/user-attachments/assets/3c11bde5-dfae-4ff9-9074-4c29e87f7023)
-
+![image](https://github.com/user-attachments/assets/447fed2c-d41a-43a0-9630-836df4125802)
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.

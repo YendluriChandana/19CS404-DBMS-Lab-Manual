@@ -110,6 +110,7 @@ CREATE TABLE Table_Name (
 ```sql
 -- Paste your SQL code below for Question 1
 ```
+
 ![image](https://github.com/user-attachments/assets/647dbedb-636d-42c5-b902-1bcecd994360)
 
 
@@ -118,18 +119,6 @@ CREATE TABLE Table_Name (
 ![image](https://github.com/user-attachments/assets/32d2f9a7-cd0c-42e3-b5c7-a4703a7e85b6)
 
 
-**Question 2**
----
--- Paste Question 2 here
-
-```sql
--- Paste your SQL code below for Question 2
-```
-
-**Output:**
-
-![Output2](output.png)
-
 **Question 3**
 ---
 -- Paste Question 3 here
@@ -137,12 +126,15 @@ CREATE TABLE Table_Name (
 ```sql
 -- Paste your SQL code below for Question 3
 ```
+
 ![image](https://github.com/user-attachments/assets/a75729c2-8d27-433e-9d0d-2331cc860fd6)
 
 
 **Output:**
 
+
 ![image](https://github.com/user-attachments/assets/c76a53ff-1bc6-42e4-ac77-52afbe8b98e8)
+
 
 **Question 4**
 ---
@@ -151,11 +143,15 @@ CREATE TABLE Table_Name (
 ```sql
 -- Paste your SQL code below for Question 4
 ```
+
 ![image](https://github.com/user-attachments/assets/a25f6f41-5acc-4fdd-9848-ee238b2b4181)
+
 
 **Output:**
 
+
 ![image](https://github.com/user-attachments/assets/504d67ca-8b48-4ba2-b122-2a92eef6a250)
+
 
 **Question 5**
 ---
@@ -164,9 +160,13 @@ CREATE TABLE Table_Name (
 ```sql
 -- Paste your SQL code below for Question 5
 ```
+
+
 ![image](https://github.com/user-attachments/assets/066556bd-b395-49cb-86bb-1f361a9f5c2f)
 
+
 **Output:**
+
 
 ![image](https://github.com/user-attachments/assets/b1590955-fedb-44a5-857a-0073fb85792a)
 
@@ -178,10 +178,12 @@ CREATE TABLE Table_Name (
 ```sql
 -- Paste your SQL code below for Question 6
 ```
+
 ![image](https://github.com/user-attachments/assets/8646cd02-bf5d-4215-98d5-e88773dc6bd7)
 
 
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/06922205-9e08-4b9b-a3d8-af9aa4a1db6a)
 
 
@@ -192,11 +194,15 @@ CREATE TABLE Table_Name (
 ```sql
 -- Paste your SQL code below for Question 7
 ```
+
 ![image](https://github.com/user-attachments/assets/7f7e7207-b62c-431c-b40c-4e750b53b633)
+
 
 **Output:**
 
+
 ![image](https://github.com/user-attachments/assets/8c67c27e-2087-480b-bd88-df015154f3ed)
+
 
 
 **Question 8**
@@ -206,11 +212,15 @@ CREATE TABLE Table_Name (
 ```sql
 -- Paste your SQL code below for Question 8
 ```
+
 ![image](https://github.com/user-attachments/assets/a866f06a-a4a1-4dec-ae24-8bcd2e3c2394)
+
 
 **Output:**
 
+
 ![image](https://github.com/user-attachments/assets/3eda3cff-27d4-44be-9dcd-bbecc1893416)
+
 
 
 **Question 9**
@@ -220,11 +230,15 @@ CREATE TABLE Table_Name (
 ```sql
 -- Paste your SQL code below for Question 9
 ```
+
 ![image](https://github.com/user-attachments/assets/a5fe3ae9-3a04-44eb-b583-df8a460a6bc0)
+
 
 **Output:**
 
+
 ![image](https://github.com/user-attachments/assets/1f80f8bc-bc96-4973-add7-3f0b6dfc9628)
+
 
 
 **Question 10**
@@ -234,9 +248,12 @@ CREATE TABLE Table_Name (
 ```sql
 -- Paste your SQL code below for Question 10
 ```
+
 ![image](https://github.com/user-attachments/assets/f2ff8ffb-46ef-45d9-8fa4-eed01aa81884)
 
+
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/3c11bde5-dfae-4ff9-9074-4c29e87f7023)
 
 

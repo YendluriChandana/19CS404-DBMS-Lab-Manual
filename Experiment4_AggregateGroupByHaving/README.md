@@ -36,125 +36,177 @@ GROUP BY column_name
 HAVING condition;
 ```
 
-**Question 1**
---
--- Paste Question 1 here
+## Question 1
 
-```sql
--- Paste your SQL code below for Question 1
+How many patients have expired insurance coverage for each insurance company?
+Sample table:Insurance Table
+
+![image](https://github.com/user-attachments/assets/e7a956ce-6373-4ef0-af3f-49397aa39634)
+
 ```
+select InsuranceCompany,count(*) as TotalExpiredPatients
 
-**Output:**
+from Insurance
 
-![Output1](output.png)
-
-**Question 2**
----
--- Paste Question 2 here
-
-```sql
--- Paste your SQL code below for Question 2
+group by InsuranceCompany;
 ```
+## Output:
 
-**Output:**
+![image](https://github.com/user-attachments/assets/aeaec9a0-7c3e-4fe7-a16b-8519544beee7)
 
-![Output2](output.png)
 
-**Question 3**
----
--- Paste Question 3 here
+## Question 2
 
-```sql
--- Paste your SQL code below for Question 3
+How many prescriptions were written by each doctor? Sample tablePrescriptions Table
+
+![image](https://github.com/user-attachments/assets/87cefa15-e2fa-4326-badf-a9eba0dcdbaf)
+
 ```
+SELECT DoctorID,count(*) as TotalPrescriptions
 
-**Output:**
+from Prescriptions
 
-![Output3](output.png)
-
-**Question 4**
----
--- Paste Question 4 here
-
-```sql
--- Paste your SQL code below for Question 4
+group by DoctorID;
 ```
+## Output:
 
-**Output:**
+![image](https://github.com/user-attachments/assets/55f15c9e-d5ca-449e-af42-d68ab71ead70)
 
-![Output4](output.png)
+## Question 3
 
-**Question 5**
----
--- Paste Question 5 here
+What is the total number of appointments scheduled by each doctor?
 
-```sql
--- Paste your SQL code below for Question 5
+Sample table:Appointments Table
+
+![image](https://github.com/user-attachments/assets/aa2f31be-5cee-4b35-8f6f-7dd9b2d53b92)
+
+
+## Output:
+
+![image](https://github.com/user-attachments/assets/d8d8554d-98cd-4ffb-af0a-bfbcb224601a)
+
+
+## Question 4
+
+Write a SQL query to find the Fruit with the lowest available quantity.
+
+![image](https://github.com/user-attachments/assets/de52878a-2ffb-41a9-bc72-195a76e0cfa5)
+
 ```
+select name as fruit_name , min(inventory) as lowest_quantity
 
-**Output:**
-
-![Output5](output.png)
-
-**Question 6**
----
--- Paste Question 6 here
-
-```sql
--- Paste your SQL code below for Question 6
+from fruits;
 ```
+## Output:
 
-**Output:**
+![image](https://github.com/user-attachments/assets/77c4dc18-3ddb-450a-943f-876fae4d7da3)
 
-![Output6](output.png)
 
-**Question 7**
----
--- Paste Question 7 here
+## Question 5
 
-```sql
--- Paste your SQL code below for Question 7
+Write a SQL query to calculate total available amount of fruits that has a price greater than 0.5 . Return total Count.
+
+Note: Inventory attribute contains amount of fruits
+
+![image](https://github.com/user-attachments/assets/7b5d9e02-ef00-4bbd-b727-cd53aa78e752)
+
 ```
+select sum(inventory) as total_available_amount
 
-**Output:**
+from fruits
 
-![Output7](output.png)
-
-**Question 8**
----
--- Paste Question 8 here
-
-```sql
--- Paste your SQL code below for Question 8
+where price>0.5;
 ```
+## Output:
 
-**Output:**
+![image](https://github.com/user-attachments/assets/3be4e066-2bee-4b47-861e-68fa89ede6b7)
 
-![Output8](output.png)
 
-**Question 9**
----
--- Paste Question 9 here
+## Question 6
 
-```sql
--- Paste your SQL code below for Question 9
+Write a SQL query to find the average salary of all employees?
+
+![image](https://github.com/user-attachments/assets/aedeef06-dd20-4778-935d-ceb42738d030)
+
 ```
+select avg(income) as Average_Salary
 
-**Output:**
-
-![Output9](output.png)
-
-**Question 10**
----
--- Paste Question 10 here
-
-```sql
--- Paste your SQL code below for Question 10
+from employee;
 ```
+## Output:
 
-**Output:**
+![image](https://github.com/user-attachments/assets/90b1f83f-dd08-4764-8c54-e63eddcfb344)
 
-![Output10](output.png)
+
+## Question 7
+
+Write a SQL query to determine the number of customers who received at least one grade for their activity.
+
+![image](https://github.com/user-attachments/assets/53670d39-ed29-41f1-b349-e6cee687f202)
+
+```
+SELECT COUNT(customer_id) AS COUNT
+
+FROM customer
+
+where grade is not null;
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/7763733f-5927-48d8-8ad4-ac6617403b42)
+
+
+## Question 8
+
+Write the SQL query that accomplishes the selection of total cost of all products in each category from the "products" table and includes only those products where the total cost is greater than 50.
+
+![image](https://github.com/user-attachments/assets/711c76b9-f3f9-4129-92e2-276f5fbb9b3c)
+
+```
+select category_id,sum(price) as Total_Cost
+
+from products
+
+group by category_id
+
+having Total_Cost>50;
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/8bb4dc44-9307-49a7-810b-6da9a6c72626)
+
+## Question 9
+
+Write a SQL query to find the difference between the maximum and minimum price of fruits?
+
+![image](https://github.com/user-attachments/assets/3b0e954f-944b-476c-9265-c20ac0f5397d)
+
+```
+select (max(price)-min(price)) as price_diff
+
+from fruits;
+```
+### Output:
+
+![image](https://github.com/user-attachments/assets/833cf95f-58f0-4d9d-8095-c9f6a2712348)
+
+
+## Question 10
+
+Write a SQL query to find the average length of names for people living in Chennai?
+
+![image](https://github.com/user-attachments/assets/b5f4c03c-c2fb-43a0-b5d1-a63e18d8559f)
+
+```
+select avg(length(name)) as avg_name_length
+
+from customer
+
+where city like '%Chennai%';
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/a3c297cb-840a-4f1e-857b-dd83ce34547b)
 
 
 ## RESULT

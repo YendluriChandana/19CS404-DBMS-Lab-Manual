@@ -45,125 +45,194 @@ Used to retrieve records from a table.
 ```sql
 SELECT column1, column2 FROM table_name WHERE condition;
 ```
-**Question 1**
---
--- Paste Question 1 here
+## Question 1
 
-```sql
--- Paste your SQL code below for Question 1
+Decrease the reorder level by 30 percent where the product name contains 'cream' and quantity in stock is higher than reorder level in the products table.
+
+![image](https://github.com/user-attachments/assets/ca99ba75-3f43-4b06-bc86-01b8376ccc56)
+
 ```
 
-**Output:**
+update PRODUCTS
 
-![Output1](output.png)
+set reorder_lvl=reorder_lvl*0.7
 
-**Question 2**
----
--- Paste Question 2 here
+where product_name like '%cream%'
 
-```sql
--- Paste your SQL code below for Question 2
+and quantity>reorder_lvl;
 ```
+## Output:
 
-**Output:**
+![image](https://github.com/user-attachments/assets/300c92ab-68c7-475f-b993-e13c1004adc0)
 
-![Output2](output.png)
 
-**Question 3**
----
--- Paste Question 3 here
+## Question 2
 
-```sql
--- Paste your SQL code below for Question 3
+Write a SQL statement to Update the address to '58 Lakeview, Magnolia' where supplier ID is 5 in the suppliers table.
+
+![image](https://github.com/user-attachments/assets/de29b555-7708-40f4-9edc-7e11d3bdb360)
+
 ```
+update Suppliers
 
-**Output:**
+set address= '58 Lakeview, Magnolia'
 
-![Output3](output.png)
-
-**Question 4**
----
--- Paste Question 4 here
-
-```sql
--- Paste your SQL code below for Question 4
+where supplier_id=5;
 ```
+## Output:
 
-**Output:**
+![image](https://github.com/user-attachments/assets/52779475-0939-4242-b557-7b36eb5ad7ae)
 
-![Output4](output.png)
+## Question 3
 
-**Question 5**
----
--- Paste Question 5 here
+Write a SQL statement to Increase the selling price by 15% in the products table where quantity in stock is less than 50 and supplier ID is 10.
 
-```sql
--- Paste your SQL code below for Question 5
+![image](https://github.com/user-attachments/assets/a1294f9f-6a89-47e5-bc49-f569770cdc43)
+
 ```
+update Products
 
-**Output:**
+set sell_price=sell_price*1.15
 
-![Output5](output.png)
+where quantity<50
 
-**Question 6**
----
--- Paste Question 6 here
-
-```sql
--- Paste your SQL code below for Question 6
+and supplier_id=10;
 ```
+## Output:
 
-**Output:**
+![image](https://github.com/user-attachments/assets/e73eea98-6729-4ed1-8fdc-18e78e440442)
 
-![Output6](output.png)
 
-**Question 7**
----
--- Paste Question 7 here
+## Question 4
 
-```sql
--- Paste your SQL code below for Question 7
+For Increase the selling price per unit by 3 for all products supplied by supplier ID 4 in the sales table.
+
+![image](https://github.com/user-attachments/assets/24550324-b900-4471-bee5-c0571a951167)
+
 ```
+update Products
 
-**Output:**
+set sell_price=sell_price*1.15
 
-![Output7](output.png)
+where quantity<50
 
-**Question 8**
----
--- Paste Question 8 here
-
-```sql
--- Paste your SQL code below for Question 8
+and supplier_id=10;
 ```
+## Output:
 
-**Output:**
+![image](https://github.com/user-attachments/assets/40656f7f-a8ed-4364-8d6b-6a03b4c25f0d)
 
-![Output8](output.png)
 
-**Question 9**
----
--- Paste Question 9 here
+## Question 5
 
-```sql
--- Paste your SQL code below for Question 9
+For Increase the selling price per unit by 3 for all products supplied by supplier ID 4 in the sales table.
+
+![image](https://github.com/user-attachments/assets/d650e2f9-7e7b-4e9b-b563-f89781c60c17)
+
 ```
+update SALES
 
-**Output:**
+set sell_price=sell_price+3
 
-![Output9](output.png)
+where product_id in(select product_id
 
-**Question 10**
----
--- Paste Question 10 here
+from PRODUCTS
 
-```sql
--- Paste your SQL code below for Question 10
+where supplier_id=4 );
 ```
+## Output:
 
-**Output:**
+![image](https://github.com/user-attachments/assets/be036bc9-f7e2-44e3-9617-66786d8eb793)
 
-![Output10](output.png)
+
+## Question 6
+
+Write a SQL statement to Double the salary for employees in department 20 who have a job_id ending with 'MAN'
+
+![image](https://github.com/user-attachments/assets/c0733286-73ed-4bf4-aeeb-eecdba9d04fb)
+
+```
+UPDATE Employees
+
+set salary=salary*2
+
+where department_id=20
+
+and job_id like '%MAN';
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/e13c1c79-763d-40d0-9cb2-92cf80124b58)
+
+
+## Question 7
+
+Write a SQL query to Delete a Specific Surgery which was made on 28th Feb 2024.
+
+![image](https://github.com/user-attachments/assets/db4eb244-b658-4bc7-b50e-c77a29a2542e)
+
+```
+delete from Surgeries
+
+where surgery_date='2024-02-28';
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/9b43c798-c59e-4023-ac35-4dd5ae32a5a0)
+
+
+## Question 8
+
+Write a SQL query to Delete customers from 'customer' table where 'CUST_CITY' is not 'New York' and 'OUTSTANDING_AMT' is greater than 5000.
+
+![image](https://github.com/user-attachments/assets/ce8198dd-0759-4717-af2d-24b178dfa9a4)
+
+```
+delete from Customer
+
+where CUST_CITY!='New York'
+
+and OUTSTANDING_AMT>5000;
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/c4c9fad6-09a3-4e0e-99e4-fdcb0fcf1fc9)
+
+
+## Question 9
+
+Write a SQL query to Delete all Doctors whose Specialization is either 'Pediatrics' or 'Cardiology' and Last Name is Brown.
+
+![image](https://github.com/user-attachments/assets/3782bedc-5b50-46fd-bc96-7de435b15f70)
+
+```
+delete from Doctors
+
+where Specialization in ('Pediatrics','Cardiology')
+
+and last_name like '%Brown%';
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/577d8cee-6808-48c0-81d7-2883b6fb5ef3)
+
+
+## Question 10
+
+Write a SQL query to Delete customers from 'customer' table where 'GRADE' is greater than or equal to 2.
+
+![image](https://github.com/user-attachments/assets/a8cdd413-2d94-4597-a26c-e364f7939174)
+
+```
+delete from Customer
+
+where GRADE>=2;
+```
+## Output:
+
+![image](https://github.com/user-attachments/assets/fba2d683-405d-427f-92a2-0f329b80235b)
+
+
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
